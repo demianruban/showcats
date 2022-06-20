@@ -13,4 +13,17 @@
 	<img id="catimg" class="imgview" src="https://cataas.com/cat/says/hello" width="500" height="600"></img>
 	</p>
     </body>
+    <script>
+	window.onload = function() {
+	    setInterval(changeCats, 3000)
+	}
+
+	function changeCats() {
+	    var timestamp = new Date().getTime()
+
+	    let img = document.getElementById("catimg")
+	    // reload image
+	    img.src = "https://cataas.com/cat/says/hello?t=" + timestamp
+	}
+    </script>
 </html>
